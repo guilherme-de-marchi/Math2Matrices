@@ -1,2 +1,2 @@
-# GITHUB: https://github.com/Guilherme-De-Marchi/Neural-Network-v2
+# GITHUB: https://github.com/Guilherme-De-Marchi/Math2Matrices
 # License: MIT

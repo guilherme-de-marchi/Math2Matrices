@@ -1,4 +1,4 @@
-# GITHUB: https://github.com/Guilherme-De-Marchi/Neural-Network-v2
+# GITHUB: https://github.com/Guilherme-De-Marchi/Math2Matrices
 # License: MIT
 
 from functools import reduce
@@ -33,7 +33,7 @@ class Matrix:
         return self.__class__(result)
 
     @classmethod
-    def iterateTwoMatrices(cls, function, a: 'Matrix', b: 'Matrix'=[], additional=0):
+    def iterateTwoMatrices(cls, function, a: 'Matrix', b: 'Matrix', additional=0):
         '''param: function(params -> a, b[optional], additional[optional])'''
 
         result = []
@@ -46,7 +46,7 @@ class Matrix:
         return cls(result)
 
     @classmethod
-    def zipIterateTwoMatrices(cls, function, a: 'Matrix', b: 'Matrix'=[], additional=0):
+    def zipIterateTwoMatrices(cls, function, a: 'Matrix', b: 'Matrix', additional=0):
         '''param: function(params -> a, b[optional], additional[optional])'''
 
         result = []
@@ -117,7 +117,7 @@ class Matrix:
 
         assert a._size[0] == b._size[1], 'invalid multiplication between matrices'
 
-        return cls.zipIterateTwoMatrices(lambda *args: reduce(lambda x, y: x * y, args[:-1]), a, b)
+        return cls.zipIterateTwoMatrices(lambda value_a, value_b, *_: value_a * value_b, a, b)
 
     def __str__(self):
         return str(self._content)
